@@ -8,19 +8,22 @@ import { Router } from './Router'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/ReactToastify.min.css'
+import { UserProvider } from './contexts/UserContext'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <BrowserRouter>
-        <Router />
-        <ToastContainer
-          autoClose={3000}
-          pauseOnHover={false}
-          style={{ width: 'max-content' }}
-        />
-      </BrowserRouter>
+      <UserProvider>
+        <BrowserRouter>
+          <Router />
+          <ToastContainer
+            autoClose={3000}
+            pauseOnHover={false}
+            style={{ width: 'max-content' }}
+          />
+        </BrowserRouter>
+      </UserProvider>
     </ThemeProvider>
   )
 }

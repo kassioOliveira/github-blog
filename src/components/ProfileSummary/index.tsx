@@ -8,20 +8,12 @@ import {
   FaUserFriends,
   FaExternalLinkAlt,
 } from 'react-icons/fa'
+import { useContext } from 'react'
+import { UserContext } from '../../contexts/UserContext'
 
-interface IUser {
-  user?: {
-    name: string
-    login: string
-    avatarUrl: string
-    githubURL: string
-    location: string
-    followers: number
-    bio: string
-  }
-}
+export function ProfileSummary() {
+  const { user } = useContext(UserContext)
 
-export function ProfileSummary({ user }: IUser) {
   if (!user) {
     return (
       <ProfileSummaryComponent>

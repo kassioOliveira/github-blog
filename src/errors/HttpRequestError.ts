@@ -1,7 +1,7 @@
 export class CustomError extends Error {
   statusCode: number
 
-  constructor(statusCode: number, message: string) {
+  constructor(statusCode: number = 500, message: string = 'Erro no servidor.') {
     super(message)
 
     Object.setPrototypeOf(this, new.target.prototype)
