@@ -6,12 +6,20 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { Router } from './Router'
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/ReactToastify.min.css'
+
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <BrowserRouter>
         <Router />
+        <ToastContainer
+          autoClose={3000}
+          pauseOnHover={false}
+          style={{ width: 'max-content' }}
+        />
       </BrowserRouter>
     </ThemeProvider>
   )
