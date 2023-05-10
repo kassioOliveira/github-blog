@@ -27,7 +27,7 @@ interface LabelType {
   nod_id: string
 }
 
-interface PostType {
+export interface PostType {
   id: number
   title: string
   body: string
