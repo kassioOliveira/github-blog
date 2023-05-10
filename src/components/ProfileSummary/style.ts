@@ -15,15 +15,25 @@ export const ProfileSummaryComponent = styled.section`
   img {
     width: 230px;
     border-radius: 6px;
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
 `
 
 export const ProfileSubContainer = styled.div`
   width: 90%;
-  height: 250px;
+  min-height: 250px;
   display: flex;
   justify-content: space-between;
   align-items: end;
+  @media (max-width: 1123px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+  }
 
   > div {
     width: 100%;
@@ -34,6 +44,11 @@ export const ProfileSubContainer = styled.div`
     justify-content: space-between;
     gap: 10px;
     padding: 1rem;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      padding: 0;
+    }
 
     header {
       display: flex;
@@ -51,11 +66,21 @@ export const ProfileSubContainer = styled.div`
         align-items: center;
         gap: 1rem;
       }
+
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+      }
     }
 
     main {
       p {
         font-size: 1.3rem;
+        @media (max-width: 1123px) {
+          text-align: center;
+        }
       }
     }
 
@@ -68,6 +93,13 @@ export const ProfileSubContainer = styled.div`
         display: flex;
         gap: 1rem;
         align-items: center;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 10px;
+        overflow: hidden;
       }
     }
   }
