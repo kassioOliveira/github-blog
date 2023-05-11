@@ -9,7 +9,7 @@ interface PostTypeProp {
 
 export function Post({ post }: PostTypeProp) {
   return (
-    <PostComponent to={`/post/${post.id}`}>
+    <PostComponent to={`/article/${post.number}`}>
       <div>
         <article>
           <header>

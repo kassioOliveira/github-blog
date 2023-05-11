@@ -33,7 +33,7 @@ export function SearchForm() {
         <form onSubmit={handleSubmit(handleQuery)}>
           <input
             type="text"
-            placeholder="Buscar conteúdo"
+            placeholder="Click enter para buscar"
             {...register('query')}
           />
         </form>

@@ -16,6 +16,10 @@ export const SearchComponent = styled.div`
     width: 80%;
     max-width: 1123px;
 
+    h2 {
+      color: ${(props) => props.theme['base-subtitle']};
+    }
+
     > span {
       display: block;
       font-size: 1.2rem;

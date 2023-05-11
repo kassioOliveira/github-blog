@@ -6,6 +6,7 @@ export const LoadingComponent = styled.div`
   height: 100px;
   border-radius: 6px;
   background: ${(props) => props.theme['base-profile']};
+  color: ${(props) => props.theme['base-title']};
   margin: 10px auto;
   margin-bottom: 30px;
   display: flex;

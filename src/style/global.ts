@@ -18,5 +18,8 @@ body {
         font: 400 1rem Nunito, sans-serif;
         
     }
+    h1,h2,h3,h4,h5,h6{
+        color: ${(props) => props.theme['base-title']};
+    }
 
 `

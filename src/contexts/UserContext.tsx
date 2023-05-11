@@ -9,7 +9,7 @@ import { Api } from '../services/api/axios'
 import { CustomError } from '../errors/HttpRequestError'
 import { toast } from 'react-toastify'
 
-interface UserType {
+export interface UserType {
   name: string
   login: string
   avatarUrl: string
@@ -35,6 +35,7 @@ export interface PostType {
   created_at: string
   number: number
   labels: LabelType[]
+  html_url: string
 }
 
 interface UseContextType {
