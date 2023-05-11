@@ -27,7 +27,7 @@ export function Article() {
       .catch((error) => {
         if (error instanceof CustomError) {
           if (error.statusCode === 404) {
-            navigate('/')
+            navigate('/notfound')
             return
           }
 
